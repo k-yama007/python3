@@ -10,9 +10,10 @@ class Myclass:
 class Dog:
 
     kind = 'canine'    #class variable shared by all instances
-    tricks = []
+    #dell_k_yama007 tricks = []       
     def __init__(self,name):
         self.name = name    #instance variable unique to each instance
+        self.tricks = []
     
     def add_trick(self,trick):
         self.tricks.append(trick)
