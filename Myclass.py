@@ -21,6 +21,16 @@ print("Myclass.f():",x.f())
 print("Myclass.i:",x.i)
 print("y=Myclass:",y)
 
+#9.3.3. インスタンスオブジェクト
+x.counter =1
+
+while x.counter <10:
+    x.counter = x.counter +2
+print("x.counter : ",x.counter)
+del x.counter
+
+
+
 
 if __name__ == "__main__" :
     import sys
