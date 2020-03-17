@@ -10,10 +10,12 @@ class Myclass:
 class Dog:
 
     kind = 'canine'    #class variable shared by all instances
-
+    tricks = []
     def __init__(self,name):
         self.name = name    #instance variable unique to each instance
-
+    
+    def add_trick(self,trick):
+        self.tricks.append(trick)
 
 
 
@@ -43,11 +45,16 @@ del x.counter
 d= Dog('Fido')
 e= Dog('Buddy')
 
+d.add_trick('roll over')
+e.add_trick('play dead')
+
 print("kind of Dog:",d.kind)
 print("kind of Dog:",e.kind)
 print("name of Dog:",d.name)
 print("name of Dog:",e.name)
-        
+
+print(d.tricks)  #unexpectedly shared by all dogs
+
 
 if __name__ == "__main__" :
     import sys
