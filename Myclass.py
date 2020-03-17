@@ -7,6 +7,16 @@ class Myclass:
     
 
 
+class Dog:
+
+    kind = 'canine'    #class variable shared by all instances
+
+    def __init__(self,name):
+        self.name = name    #instance variable unique to each instance
+
+
+
+
 def __init__(self):
     self.data=[]
 
@@ -29,8 +39,15 @@ while x.counter <10:
 print("x.counter : ",x.counter)
 del x.counter
 
+#9.3.5. クラスとインスタンス変数
+d= Dog('Fido')
+e= Dog('Buddy')
 
-
+print("kind of Dog:",d.kind)
+print("kind of Dog:",e.kind)
+print("name of Dog:",d.name)
+print("name of Dog:",e.name)
+        
 
 if __name__ == "__main__" :
     import sys
